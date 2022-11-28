@@ -26,7 +26,12 @@ const isSortingAscending = queryParams.get('sort') === 'asc';
 const sortedQuotes = sortQuotes(props.quotes, isSortingAscending)
 // dynamic handler for button if its asc show desc and vice versa
 const changeSortHandler = () => {
-    history.push("/quote-list?sort=" + (isSortingAscending ? 'desc' : 'asc'));
+  // well-written version of coded out below
+  history.push({
+    pathname: location.pathname,
+    search: `?sort=${(isSortingAscending ? 'desc' : 'asc')}`
+  })
+    // history.push(`${location.pathname}?sort=${(isSortingAscending ? 'desc' : 'asc')}`);
 
   };
 
