@@ -2,12 +2,12 @@ import QuoteList from '../components/quotes/QuoteList'
 
 const DUMMY_DATA = [
     {
-        id: 1,
+        id: 'q1',
         author: 'Ben',
         text: 'Learning Links',
     },
     {
-        id: 2,
+        id: 'q2',
         author: 'Bob',
         text: 'React is great!',
     },
